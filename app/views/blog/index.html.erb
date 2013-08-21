@@ -1,10 +1,10 @@
-<h2>Что новенького?</h2>
+<h3>Что новенького?</h3>
 <div class="posts">
 	<% @posts.each do |post| %>
 		<div class="post">
 			<div class="title"><%= post.title%></div>
 			<div class="text"><%= post.text %></div>
-			<a href="blog/<%= post.id %>">Смотреть полностью</a>
+			<a class="dashed" href="blog/<%= post.id %>">Смотреть полностью</a>
 		</div>
 	<% end %>
 </div>

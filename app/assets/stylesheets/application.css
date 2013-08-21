@@ -29,3 +29,13 @@
 .post .title {
 	font-weight: bold;
 }
+
+.dashed {
+	border-bottom-style: dashed;
+	border-bottom-width: 1px;
+}
+
+.info-feedback {
+	width: 200px;
+	display: inline-block;
+}
