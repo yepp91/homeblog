@@ -18,7 +18,7 @@ preload_app true # Мастер процесс загружает приложе
 GC.copy_on_write_friendly = true if GC.respond_to?(:copy_on_write_friendly=) # Решительно не уверен, что значит эта строка, но я решил ее оставить.
 
 before_exec do |server|
-  ENV["BUNDLE_GEMFILE"] = "/srv/harlov/home_blog/current/Gemfile"
+  ENV["BUNDLE_GEMFILE"] = "#{rails_root}/Gemfile"
 end
 
 before_fork do |server, worker|
