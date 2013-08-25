@@ -1,0 +1,11 @@
+<h2>Новый пост</h2>
+<%= form_for @post, url: {action: "create"}, html: {class: "new_post_form"} do |f| %>
+<%= f.label 		:title, 'Заголовок' 	%>
+<%= f.text_field 	:title	%><br />
+<br />
+
+<%= f.label 		:text, 'Текст' 	%>
+<%= f.text_area 	:text,rows:10 	%><br />
+
+<%= f.submit "Создать" %>
+<% end %>
