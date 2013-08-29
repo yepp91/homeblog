@@ -3,7 +3,7 @@
 	<% @posts.each do |post| %>
 		<div class="post">
 			<div class="title"><%= post.title%></div>
-			<div class="text"><%= post.text.html_safe%></div>
+			<div class="text"><%= post.text.html_safe %></div>
 			<a class="dashed" href="blog/<%= post.id %>">Смотреть полностью</a>
 		</div>
 	<% end %>
