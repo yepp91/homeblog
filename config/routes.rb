@@ -5,7 +5,7 @@ Homeblog::Application.routes.draw do
   get "blog" => "blog#index"
   get "feedback" => "main#feedback"  
   get "blog/new"
-  get "blog/:id" => "blog#show"
+  get "post:id" => "blog#show"
   get "items"   =>  "items#index"
   post "blog/create"
   root :to => 'blog#index'
