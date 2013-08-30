@@ -15,4 +15,4 @@
 //= require twitter/bootstrap
 //= require_tree .
 
-
+VK.init({apiId: 3053949, onlyWidgets: true});

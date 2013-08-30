@@ -1,3 +1,7 @@
-<h2>Пост # <%= @post.id %></h2>
 <h3><%= @post.title %></h3>
 <p><%= @post.text.html_safe %></p>
+<hr>
+<div id="vk_comments"></div>
+<script type="text/javascript">
+VK.Widgets.Comments("vk_comments", {limit: 10, width: "520", attach: "*"});
+</script>
