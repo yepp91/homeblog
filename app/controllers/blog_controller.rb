@@ -13,6 +13,6 @@ class BlogController < ApplicationController
   	redirect_to :action => :show, :id => @post.id
   end
   def show
-  	@post = Post.find(params[:id])
+  	@post = Post.find(params[:id])    
   end
 end
