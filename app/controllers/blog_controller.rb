@@ -2,7 +2,7 @@ class BlogController < ApplicationController
   before_filter :authenticate_user!, only: [:new,:create]
   before_filter :is_admin, only: [:new,:create]
   def index
-  	@posts = Post.all
+  	@posts = Post.order("created_at DESC");
   end  
   def new    
   	@post = Post.new
