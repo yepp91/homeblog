@@ -41,3 +41,5 @@ namespace :deploy do
     run "if [ -f #{unicorn_pid} ] && [ -e /proc/$(cat #{unicorn_pid}) ]; then kill -QUIT `cat #{unicorn_pid}`; fi"
   end
 end
+
+after "deploy", "deploy:migrate"
