@@ -1,11 +1,13 @@
 class BlogController < ApplicationController
+  before_filter :authenticate_user!, only: [:new,:create]
+  before_filter :is_admin, only: [:new,:create]
   def index
   	@posts = Post.all
-  end
-  def new
+  end  
+  def new    
   	@post = Post.new
   end
-  def create
+  def create    
   	@post = Post.new(params[:post])
   	@post.save()
   	redirect_to :action => :show, :id => @post.id
