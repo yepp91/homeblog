@@ -27,6 +27,10 @@
 	border-bottom-width: 1px;
 }
 
+.navbar-inner {
+	background-color:  linear-gradient(to bottom, #DCFBDB, #FAF1FD) !important;
+}
+
 .info-feedback {
 	
 }
