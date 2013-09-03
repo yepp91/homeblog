@@ -28,7 +28,7 @@
 }
 
 .navbar-inner {
-	background-color:  linear-gradient(to bottom, #DCFBDB, #FAF1FD) !important;
+	background-image:  linear-gradient(to bottom, #DCFBDB, #FAF1FD) !important;
 }
 
 .info-feedback {
