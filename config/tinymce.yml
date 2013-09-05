@@ -9,4 +9,4 @@ plugins:
   - fullscreen
   - image
 extended_valid_elements:
-  - iframe
+  - iframe[src|width|height|name|align|frameborder|allowfullscreen]
