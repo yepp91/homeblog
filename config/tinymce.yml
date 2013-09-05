@@ -8,4 +8,5 @@ plugins:
   - table
   - fullscreen
   - image
+extended_valid_elements:
   - iframe
