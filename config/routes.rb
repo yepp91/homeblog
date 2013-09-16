@@ -9,6 +9,7 @@ Homeblog::Application.routes.draw do
   get "blog/new"
   get "post:id" => "blog#show"
   get "items"   =>  "items#index"
+  get "wtf"   =>  "main#how_time"
   post "blog/create"
   root :to => 'blog#index'
 
