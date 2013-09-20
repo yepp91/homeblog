@@ -3,7 +3,7 @@
 <div class="posts">
 	<% @posts.each do |post| %>
 		<div class="post">
-			<div class="title"><a class="dashed" href="post<%= post.id %>"><%= post.title.html_save %></a></div><span class="created_at"><%= post.created_at %></span>			
+			<div class="title"><a class="dashed" href="post<%= post.id %>"><%= post.title.html_safe %></a></div><span class="created_at"><%= post.created_at %></span>			
 			<div class="text"><%= post.text.html_safe %></div>			
 		</div>
 	<% end %>
