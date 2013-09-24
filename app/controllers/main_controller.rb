@@ -7,8 +7,9 @@ class MainController < ApplicationController
 
 	def how_time
 		now = Time.new
-		work_end = Time.local(now.year,now.month,now.day,3,0,0)		
-		@diff = (work_end.to_i - now.to_i)/3600
+		work_end = Time.mktime(now.year,now.month,now.day,3,0,0)		
+		@diff_hour = (work_end.to_i - now.to_i)/3600
+		@diff_mins = ((work_end.to_i - now.to_i)%3600)/60
 		@work_end = work_end
 		@now = now
 	end
