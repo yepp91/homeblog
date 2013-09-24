@@ -8,6 +8,7 @@ set :deploy_to, "/srv/harlov/#{application}"
 set :use_sudo, false
 set :unicorn_conf, "#{deploy_to}/current/config/unicorn.rb"
 set :unicorn_pid, "#{deploy_to}/shared/pids/unicorn.pid"
+set :normalize_asset_timestamps, false
 
 set :rvm_ruby_string, '1.9.3' # Это указание на то, какой Ruby интерпретатор мы будем использовать.
 
