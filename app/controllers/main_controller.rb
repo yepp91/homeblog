@@ -16,6 +16,7 @@ class MainController < ApplicationController
 		if (now.hour >= 6 and now.hour <= 11 )
 			@mess = "Скоро обед, крепись..."
 		end
+		else
 		if (now.hour == 11 and now.min >= 0 and now.min <= 45)
 			@mess = "Какго хера ты еще не на обеде?"
 		end
@@ -23,6 +24,9 @@ class MainController < ApplicationController
 		if ( (now.hour == 11 and now.min > 45) or (now.hour > 11) )
 			@mess = "Скоро домой, соберись."
 		end
+		else
+			@mess = "?"
+
 		@work_end = work_end
 		@now = now
 		begin
