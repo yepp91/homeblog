@@ -1,3 +1,4 @@
+# coding: utf-8
 require 'net/http'
 require 'json'
 
@@ -12,6 +13,15 @@ class MainController < ApplicationController
 		work_end = Time.mktime(now.year,now.month,now.day,15,0,0)		
 		@diff_hour = ((work_end.to_i - now.to_i)/3600).abs
 		@diff_mins = ((work_end.to_i - now.to_i)%3600)/60
+		if (now.hour >= 6 and now.hour <= 11 )
+			@mess = "Скоро обед, крепись..."
+		end
+		if (now.hour == 11 and now.minute >= 0 and now.minute <= 45)
+			@mess = "Какго хера ты еще не на обеде?"
+		end
+		if ( (now.hour == 11 and now.minute > 45) or (now.hour > 11) )
+			@mess = "Скоро домой, соберись."
+		end
 		@work_end = work_end
 		@now = now
 		@advise = JSON.parse Net::HTTP.get('fucking-great-advice.ru', '/api/random_by_tag/%D0%BA%D0%BE%D0%B4%D0%B5%D1%80%D1%83')
