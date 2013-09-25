@@ -28,7 +28,7 @@ class MainController < ApplicationController
 			@mess = "?"
 
 		@work_end = work_end
-		@now = now
+		@now = now 
 		begin
 			@advise = JSON.parse Net::HTTP.get('fucking-great-advice.ru', '/api/random_by_tag/%D0%BA%D0%BE%D0%B4%D0%B5%D1%80%D1%83')
 		rescue
