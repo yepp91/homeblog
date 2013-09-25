@@ -14,18 +14,18 @@ class MainController < ApplicationController
 		@diff_hour = ((work_end.to_i - now.to_i)/3600).abs
 		@diff_mins = ((work_end.to_i - now.to_i)%3600)/60
 		if (now.hour >= 6 and now.hour <= 11 )
-			@mess = "Скоро обед, крепись..."
+			@mess = "Скоро обед, крепись..."		
 		end
-		else
 		if (now.hour == 11 and now.min >= 0 and now.min <= 45)
 			@mess = "Какго хера ты еще не на обеде?"
 		end
-		else
 		if ( (now.hour == 11 and now.min > 45) or (now.hour > 11) )
-			@mess = "Скоро домой, соберись."
+			@mess = "Скоро домой, соберись."		
 		end
-		else
-			@mess = "?"
+
+		if (now.hour >= 15)
+			@mess = "Домой! &_&"
+		end
 
 		@work_end = work_end
 		@now = now 
