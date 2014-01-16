@@ -41,30 +41,29 @@ h3.post_title {
 
 
 .upp_block {
-	position: fixed;
-	top:0;
-	left:0;
+	position: fixed;	
+	bottom: 0;
+	left: 0;
 	color: black;
-	vertical-align: middle;
-	height:100%;
-	width:5%;
-	background-color:#DCFBDB;
-	opacity: 0.4;
-	cursor:pointer;
+	text-align: center;
+	height: 30px;
+	z-index: 1500;
+	width: 100%;
+	background-color: #DCFBDB;
+	opacity: 0.6;
+	cursor: pointer;
 }
 
 .upp_label {
-	position: fixed;
-	top: 50%;
-	opacity: 1 !important;
-	z-index: 1000;
+	opacity: 1 !important;	
 	font-weight: bold;
-	color: #0088cc;
-	margin-left: 4px;
+	color: #0088cc;	
 	cursor :pointer;
 	font-size: 14px;
+	position: relative;
+	top: 5px;
 }
 
 .upp_block:hover {
-	opacity: 0.8;
+	opacity: 0.9;
 }
