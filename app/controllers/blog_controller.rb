@@ -2,7 +2,7 @@ class BlogController < ApplicationController
   before_filter :authenticate_user!, only: [:new,:create]
   before_filter :is_admin, only: [:new,:create]
   def index #главная блога. выборка всех постов.
-  	@posts = Post.order("created_at DESC");
+  	@posts = Post.paginate(:page => params[:page], :per_page => 3).order('id DESC');
   end  
   def new    #форма создания поста
   	@post = Post.new
