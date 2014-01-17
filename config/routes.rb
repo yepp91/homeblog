@@ -1,4 +1,10 @@
 Homeblog::Application.routes.draw do
+  get "article/index"
+  get "article" => "article#index"
+  get "article/create"
+
+  get "article/new"
+
   devise_for :users
 
   get "items/index"
