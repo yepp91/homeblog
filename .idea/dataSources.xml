@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="407386217">
+    <data-source source="LOCAL" name="Rails homeblog: development" uuid="a90b6fb4-d1f6-4bdd-ab46-36314aff9352">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/homeblog</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfc2dfd2df9ddfecdfcbdfc6df98dfe9</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails homeblog: production" uuid="e23c714f-7e36-44a9-9e51-45b8a1961f9b">
+      <driver-ref>mysql</driver-ref>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://127.0.0.1/db/production.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

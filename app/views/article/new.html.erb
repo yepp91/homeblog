@@ -1,0 +1,14 @@
+<h2>Новая статья</h2>
+<%= form_for @article, url: {action: "create"}, html: {class: "new_article_form"} do |f| %>
+<%= f.label 		:title, 'Заголовок' 	%>
+<%= f.text_field 	:title	%><br />
+<br />
+
+<%= f.label 		:text, 'Текст' 	%>
+<%= f.text_area 	:text,:class => "tinymce",rows:10 	%><br />
+<%= tinymce %>
+<%= f.text_field :tags %>
+<br />
+
+<%= f.submit "Создать" %>
+<% end %>

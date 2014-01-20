@@ -54,6 +54,8 @@ GEM
     execjs (2.0.0)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    haml (4.0.5)
+      tilt
     hashie (2.0.5)
     highline (1.6.19)
     hike (1.2.3)
@@ -174,6 +176,7 @@ DEPENDENCIES
   devise
   ejs
   execjs
+  haml
   jquery-rails
   mysql2
   omniauth

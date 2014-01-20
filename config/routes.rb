@@ -14,9 +14,12 @@ Homeblog::Application.routes.draw do
   get "feedback" => "main#feedback"  
   get "blog/new"
   get "post:id" => "blog#show"
+  get "article/show/:id" => "article#show"
   get "items"   =>  "items#index"
-  get "for_ann"   =>  "main#how_time"
+
   post "blog/create"
+  post "article/create"
+
   root :to => 'blog#index'
 
   # The priority is based upon order of creation:
