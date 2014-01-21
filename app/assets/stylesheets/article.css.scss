@@ -1,3 +1,16 @@
 // Place all the styles related to the Article controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tags a {
+	border: 1px solid gray;
+	padding: 2px;
+	color: blue;
+	border-radius: 2px;
+}
+
+.tags a:hover {
+	text-decoration: none;
+	background-color: gray;
+	color:white;
+};
