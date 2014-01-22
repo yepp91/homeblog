@@ -11,13 +11,16 @@ Homeblog::Application.routes.draw do
 
   get "blog/index"
   get "blog" => "blog#index"
+  get "blog/edit/:id" => "blog#edit"
   get "feedback" => "main#feedback"  
   get "blog/new"
   get "post:id" => "blog#show"
   get "article/show/:id" => "article#show"
   get "items"   =>  "items#index"
 
+  put "blog/save"
   post "blog/create"
+
   post "article/create"
 
   root :to => 'blog#index'
