@@ -21,6 +21,8 @@ Homeblog::Application.routes.draw do
   post "article/create"
 
   root :to => 'blog#index'
+  get "article/:tagname" => 'article#show_tag'
+  get "*path" => 'article#show_url'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

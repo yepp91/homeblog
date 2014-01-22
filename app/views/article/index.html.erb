@@ -1,1 +1,22 @@
-<h1>Статьи</h1>
+<%- if @tagname.nil? %>
+	<h1>Статьи</h1>
+<% else %>
+	<h1>Статьи по теме "<%= @tagname %>"</h1>
+<% end %>
+<hr>
+
+<% @articles.each do |article| %>
+	<div class="article">
+		<div class="article_head">
+			<h2><%= article[:title] %></h2>
+			<div>
+				<%= formatTextCutted article[:text] %>
+			</div>
+		</div>
+	<div class="tags">
+		<%- article.tags.each do |tag| %>			
+			<%= link_to tag.name,'/article/tag'+tag.id.to_s %>
+		<% end %>
+	</div>
+	</div>
+<% end %>

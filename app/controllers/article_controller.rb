@@ -1,5 +1,9 @@
 class ArticleController < ApplicationController
+  before_filter :authenticate_user!, only: [:new,:create]
+  before_filter :is_admin, only: [:new,:create]
+
   def index
+    @articles = Article.getAll()
   end
 
   def create
@@ -22,8 +26,23 @@ class ArticleController < ApplicationController
   	@article = Article.new
   end
 
+
+  def show_url
+    @article = Article.find_by_url(params[:path])
+    render "show"
+  end
+
+  def show_tag
+    @tagname = params[:tagname]
+    @articles = Article.getByTag(params[:tagname])
+    render "index"
+  end
+
   def show
   	@article = Article.find(params[:id])
+    if !@article.url.blank?
+      redirect_to "/"+@article.url
+    end
   end
 
 end

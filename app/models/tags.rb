@@ -13,4 +13,8 @@ class Tags < ActiveRecord::Base
   		return @tag_f
   	end
   end
+
+  def self.get(tagname)
+    Tags.find_by_name(tagname)
+  end
 end
