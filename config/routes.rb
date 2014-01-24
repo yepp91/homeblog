@@ -1,31 +1,32 @@
 Homeblog::Application.routes.draw do
-  get "article/index"
-  get "article" => "article#index"
-  get "article/create"
 
-  get "article/new"
+  resources :books
+
 
   devise_for :users
 
   get "items/index"
-
-  get "blog/index"
-  get "blog" => "blog#index"
-  get "blog/edit/:id" => "blog#edit"
   get "feedback" => "main#feedback"  
-  get "blog/new"
-  get "post:id" => "blog#show"
-  get "article/show/:id" => "article#show"
   get "items"   =>  "items#index"
 
-  put "blog/save"
-  post "blog/create"
+  #get "blog/index"
+  #get "blog" => "blog#index"
+  #get "blog/edit/:id" => "blog#edit"
+  
+  #get "blog/new"
 
-  post "article/create"
+  resources :blogs
+  get 'blog'  => "blogs#index", as:  :blog_index
+  get 'post:id' => "blogs#show", as: :blog
+  put 'post:12' => "blogs#update"
 
-  root :to => 'blog#index'
+  
+
+  resources :article
   get "article/:tagname" => 'article#show_tag'
   get "*path" => 'article#show_url'
+
+  root :to => 'blogs#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

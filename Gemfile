@@ -45,6 +45,7 @@ gem 'tinymce-rails-imageupload', '~> 3.5.8.1'
 gem 'tinymce-rails'
 
 gem 'haml'
+gem 'sitemap'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
