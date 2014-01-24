@@ -36,11 +36,14 @@ group :development do
 end
 
 
-gem 'devise'
+gem 'devise', '3.0.3'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-vkontakte'
+gem "synapses-tinymce-rails-imageupload", "~> 0.1.1"
+gem 'tinymce-rails-imageupload', '~> 3.5.8.1'
 gem 'tinymce-rails'
+
 gem 'haml'
 
 # To use ActiveModel has_secure_password
